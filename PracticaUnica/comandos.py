@@ -360,10 +360,11 @@ def Reportar():
         doc = dominate.document(title='Registros') #Documento
         with doc.head:
             meta(charset="UTF-8")
+            link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z", crossorigin="anonymous")
         with doc:
-            with div(cls='Tabla'):
-                h1('Reportes')
-                with table():
+            with div(cls='Tabla', style="text-align: center"):
+                h1('Reporte')
+                with table(cls="table table-striped", style="text-align: center"):
                     for titulo in titulos:
                         with tr():
                             td(titulo)

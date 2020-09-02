@@ -1,4 +1,5 @@
 import comandos
+
 def menu():
     op=0
     salir=8
